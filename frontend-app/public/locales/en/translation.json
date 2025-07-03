@@ -1,0 +1,10 @@
+{
+  "home": {
+    "title": "Data Structures Portfolio",
+    "description": "This is a collection of exercises and examples related to the Data Structures course.",
+    "backend": "The backend runs on AWS using Java-based Lambdas and API Gateway.",
+    "iaac": "The infrastructure is managed via Infrastructure as Code (IaC) and CI/CD through GitHub Actions.",
+    "markdown": "Each exercise includes a Markdown explanation rendered in the frontend.",
+    "execution": "Exercises can be executed remotely via Java Lambda functions."
+  }
+}
