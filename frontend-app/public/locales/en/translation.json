@@ -6,5 +6,23 @@
     "iaac": "The infrastructure is managed via Infrastructure as Code (IaC) and CI/CD through GitHub Actions.",
     "markdown": "Each exercise includes a Markdown explanation rendered in the frontend.",
     "execution": "Exercises can be executed remotely via Java Lambda functions."
-  }
+  },
+  "sections": {
+    "sequential": "Sequential Structures",
+    "matrices": "Matrices",
+    "linkedLists": "Linked Lists",
+    "listInterface": "List Interface",
+    "stacks": "Stacks",
+    "queues": "Queues",
+    "dynamicArrays": "Dynamic Arrays",
+    "trees": "Trees",
+    "avlTrees": "AVL Trees",
+    "heaps": "Heaps",
+    "disjointSet": "Disjoint Set",
+    "hashTables": "Hash Tables",
+    "graphs": "Graphs"
+  },
+  "exercise": "Exercise"
 }
+
+
