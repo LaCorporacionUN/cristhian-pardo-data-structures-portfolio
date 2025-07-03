@@ -1,0 +1,26 @@
+{
+  "home": {
+    "title": "Portafolio de Estructuras de Datos",
+    "description": "Esta es una colección de ejercicios y ejemplos del curso de Estructuras de Datos.",
+    "backend": "El backend corre en AWS usando funciones Lambda en Java y API Gateway.",
+    "iaac": "La infraestructura se gestiona mediante Infraestructura como Código (IaC) y CI/CD con GitHub Actions.",
+    "markdown": "Cada ejercicio incluye una explicación en Markdown que se renderiza en el frontend.",
+    "execution": "Los ejercicios pueden ejecutarse remotamente a través de funciones Lambda en Java."
+  },
+  "sections": {
+    "sequential": "Estructuras de Datos Secuenciales",
+    "matrices": "Matrices",
+    "linkedLists": "Listas Enlazadas",
+    "listInterface": "Interfaz de Lista",
+    "stacks": "Pilas",
+    "queues": "Colas",
+    "dynamicArrays": "Arreglos Dinámicos",
+    "trees": "Árboles",
+    "avlTrees": "Árboles AVL",
+    "heaps": "Heaps",
+    "disjointSet": "Conjuntos Disjuntos",
+    "hashTables": "Tablas Hash",
+    "graphs": "Grafos"
+  },
+  "exercise": "Ejercicio"
+}
