@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Box, Button, Input, VStack } from '@chakra-ui/react'
-import content from './ejercicio2.md?raw'
+import content from './ejercicio5.md?raw'
 
 export default function Ejercicio1Page() {
   const [value, setValue] = useState('')
 
   useEffect(() => {
-    console.log('Ejercicio2Page – montado, longitud de markdown:', content.length)
+    console.log('<Ejercicio5></Ejercicio5>Page – montado, longitud de markdown:', content.length)
   }, [])
 
   return (

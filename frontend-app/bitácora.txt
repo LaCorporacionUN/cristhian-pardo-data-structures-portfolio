@@ -1,0 +1,13 @@
+1. Estructuras de Datos Secuenciales  
+2. Matrices  
+3. Listas Enlazadas  
+4. Interfaz de Lista  
+5. Pilas  
+6. Colas  
+7. Dynamic Arrays  
+8. Árboles  
+9. AVL Trees  
+10. Heaps  
+11. HeapSort  
+12. Disjoint Set  
+13. Hashing  

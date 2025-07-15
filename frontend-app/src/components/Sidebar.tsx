@@ -24,27 +24,21 @@ const tree: Record<string, Entry[]> = {}
 
 // 2) Construye árbol sección → ejercicios
 Object.keys(modules).forEach((fullPath) => {
-  // fullPath = "../markdown/1. Sequential/Ejercicio1Page.tsx"
   const parts = fullPath.split('/')
-  const section = parts[parts.length - 2]                           // "1. Sequential"
-  const compName = parts[parts.length - 1].replace(/Page\.tsx$/, '') // "Ejercicio1"
-  // Ruta RAW (con espacios)
+  const section = parts[parts.length - 2]
+  const compName = parts[parts.length - 1].replace(/Page\.tsx$/, '')
   const route = `/markdown/${section}/${compName.toLowerCase()}`
 
   if (!tree[section]) tree[section] = []
   tree[section].push({ name: compName, path: route })
 })
-console.log('Sidebar – Árbol antes de sort:', tree)
 
-// 3) Ordena cada sección
+// 3) Ordena cada sección con comparación numérica
 Object.values(tree).forEach((arr) =>
-  arr.sort((a, b) => {
-    const na = Number(a.name.match(/\d+$/)?.[0] ?? 0)
-    const nb = Number(b.name.match(/\d+$/)?.[0] ?? 0)
-    return na && nb ? na - nb : a.name.localeCompare(b.name)
-  })
+  arr.sort((a, b) =>
+    a.name.localeCompare(b.name, undefined, { numeric: true })
+  )
 )
-console.log('Sidebar – Árbol ordenado:', tree)
 
 export default function Sidebar() {
   const { t } = useTranslation()
@@ -52,6 +46,11 @@ export default function Sidebar() {
   useEffect(() => {
     console.log('Sidebar – location.pathname:', location.pathname)
   }, [location])
+
+  // 4) Ordena las secciones numéricamente por el prefijo del nombre
+  const sortedSections = Object.keys(tree).sort((a, b) =>
+    a.localeCompare(b, undefined, { numeric: true })
+  )
 
   return (
     <Box
@@ -62,40 +61,44 @@ export default function Sidebar() {
       h="100vh"
       overflowY="auto"
     >
-      <Accordion allowMultiple defaultIndex={Object.keys(tree).map((_, i) => i)}>
-        {Object.entries(tree).map(([section, entries]) => (
-          <AccordionItem key={section}>
-            <h2>
-              <AccordionButton>
-                <Box flex="1" textAlign="left">
-                  {section}
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              <VStack align="stretch">
-                {entries.map(({ name, path }) => {
-                  const num = name.match(/\d+$/)?.[0]
-                  const label = num ? `${t('exercise')} ${num}` : name
-                  console.log('Sidebar – render button:', { label, path })
-                  return (
-                    <Button
-                      key={path}
-                      as={Link}
-                      to={path}
-                      variant="ghost"
-                      w="full"
-                      onClick={() => console.log('Sidebar – click:', path)}
-                    >
-                      {label}
-                    </Button>
-                  )
-                })}
-              </VStack>
-            </AccordionPanel>
-          </AccordionItem>
-        ))}
+      <Accordion
+        allowMultiple
+        defaultIndex={[0]}         // Solo el primer panel abierto
+      >
+        {sortedSections.map((section) => {
+          const entries = tree[section]
+          return (
+            <AccordionItem key={section}>
+              <h2>
+                <AccordionButton>
+                  <Box flex="1" textAlign="left">
+                    {section}
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <VStack align="stretch">
+                  {entries.map(({ name, path }) => {
+                    const num = name.match(/\d+$/)?.[0]
+                    const label = num ? `${t('exercise')} ${num}` : name
+                    return (
+                      <Button
+                        key={path}
+                        as={Link}
+                        to={path}
+                        variant="ghost"
+                        w="full"
+                      >
+                        {label}
+                      </Button>
+                    )
+                  })}
+                </VStack>
+              </AccordionPanel>
+            </AccordionItem>
+          )
+        })}
       </Accordion>
     </Box>
   )
