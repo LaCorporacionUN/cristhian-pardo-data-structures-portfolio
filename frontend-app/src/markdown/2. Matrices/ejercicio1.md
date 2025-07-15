@@ -1,6 +1,46 @@
-# Ejercicio 1 – Sequential List
+# Ejercicio 2.1: Suma de Elementos de una Matriz  
+**Descripción:**  
+- **COMO:** Analista de datos  
+- **QUIERO:** Calcular la suma de todos los elementos en una matriz  
+- **PARA:** Practicar recorridos bidimensionales  
 
-Este ejercicio trata sobre listas secuenciales.
+**Entrada:**  
+```
+2 3  
+1 2 3  
+4 5 6
+```
 
-- Agrega un nuevo elemento al final.
-- Elimina el primer elemento.
+**Salida:**  
+```
+21
+```
+
+```mermaid
+flowchart TD
+  A[Inicio] --> B[Leer filas F y columnas C]  
+  B --> C[Leer matriz F×C]  
+  C --> D[Inicializar suma = 0]  
+  D --> E[Recorrer i=0..F-1, j=0..C-1 y acumular]  
+  E --> F[Mostrar suma]  
+  F --> G[Fin]
+```
+
+![Diagrama Ejercicio 2.1](diagram1.png)
+```
+
+```java
+public class SumaMatriz {
+    public static int sumar(int[][] m) {
+        int s = 0;
+        for (int[] fila : m) {
+            for (int v : fila) s += v;
+        }
+        return s;
+    }
+    public static void main(String[] args) {
+        int[][] m = {{1,2,3},{4,5,6}};
+        System.out.println(sumar(m));
+    }
+}
+```
