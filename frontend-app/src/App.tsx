@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { Flex, Box } from '@chakra-ui/react'
 import Sidebar from './components/Sidebar'
 import HomePage from './pages/HomePage'
 import { LanguageSwitcher } from './components/LanguageSwitcher'
 import { ThemeToggle } from './components/ThemeToggle'
+
 
 // 1) Glob eager de todos los wrappers Ejercicio*Page.tsx
 const pages = import.meta.glob<{ default: React.ComponentType }>(
@@ -60,19 +61,9 @@ export default function App() {
             {/* Fallback 404 */}
             <Route
               path="*"
-              element={
-                <Box textAlign="center" p={8}>
-                  <Box as="h1" fontSize="2xl" fontWeight="bold">
-                    ❌ Página no encontrada
-                  </Box>
-                  <Box mt={4}>
-                    <a href="/#/home" style={{ color: '#3182ce' }}>
-                      ← Volver al inicio
-                    </a>
-                  </Box>
-                </Box>
-              }
+              element={<Navigate to="/" replace />}
             />
+
           </Routes>
         </Box>
       </Flex>
