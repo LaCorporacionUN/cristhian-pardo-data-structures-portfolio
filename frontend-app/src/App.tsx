@@ -66,7 +66,7 @@ export default function App() {
                     ❌ Página no encontrada
                   </Box>
                   <Box mt={4}>
-                    <a href="/" style={{ color: '#3182ce' }}>
+                    <a href="/#/home" style={{ color: '#3182ce' }}>
                       ← Volver al inicio
                     </a>
                   </Box>
