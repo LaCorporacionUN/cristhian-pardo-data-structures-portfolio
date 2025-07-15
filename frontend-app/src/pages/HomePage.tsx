@@ -1,14 +1,14 @@
 // src/pages/HomePage.tsx
-import React from 'react';
-import { Box, Heading, Text, VStack } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
+import { Box, Heading, Text, VStack } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
-export function HomePage() {
-  const { t } = useTranslation();
+function HomePage() {
+  const { t } = useTranslation()
 
   return (
     <Box p={8} maxW="4xl" mx="auto">
       <VStack spacing={6} align="start">
+        {/* Ahora estas claves existen en nuestro i18n.ts */}
         <Heading as="h1" size="xl">
           {t('home.title')}
         </Heading>
@@ -19,5 +19,7 @@ export function HomePage() {
         <Text>{t('home.execution')}</Text>
       </VStack>
     </Box>
-  );
+  )
 }
+
+export default HomePage

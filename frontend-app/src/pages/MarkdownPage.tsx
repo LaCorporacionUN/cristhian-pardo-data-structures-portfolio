@@ -1,27 +1,43 @@
-// src/pages/MarkdownPage.tsx
-import { useEffect, useState } from 'react'
-import { Box, Spinner } from '@chakra-ui/react'
-import ReactMarkdown from 'react-markdown'
-import { useParams } from 'react-router-dom'
+import React from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { Box, Button } from '@chakra-ui/react'
+
+// Glob de todos los MDX
+const modules = import.meta.glob<{ default: React.ComponentType }>(
+  '../markdown/**/*.mdx',
+  { eager: true }
+)
 
 export default function MarkdownPage() {
-  const { docId } = useParams()
-  const [content, setContent] = useState<string | null>(null)
+  const { section = '', file = '' } = useParams<'section' | 'file'>()
+  const decoded = decodeURIComponent(section)
 
-  useEffect(() => {
-    fetch(`/markdown/${docId}.md`)
-      .then(res => res.text())
-      .then(setContent)
-      .catch(() => setContent('❌ Error cargando el archivo.'))
-  }, [docId])
+  // Buscamos el MDX correspondiente
+  const key = Object.keys(modules).find(k =>
+    k.endsWith(`/${decoded}/${file}.mdx`)
+  )
 
-  if (!content) {
-    return <Spinner size="xl" />
+  // Botón de regreso
+  const back = (
+    <Button as={Link} to="/" mb={4} colorScheme="blue">
+      ← Volver al inicio
+    </Button>
+  )
+
+  if (!key) {
+    return (
+      <Box p={8}>
+        {back}
+        <Box fontWeight="bold">❌ No se encontró «{decoded}/{file}.mdx»</Box>
+      </Box>
+    )
   }
 
+  const Component = modules[key].default
   return (
     <Box p={8}>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      {back}
+      <Component />
     </Box>
   )
 }
