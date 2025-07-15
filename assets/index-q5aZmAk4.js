@@ -452,9 +452,9 @@ public class SumaElementos {\r
 \`\`\`markdown\r
 # Ejercicio 3: Encontrar Máximo y Mínimo  \r
 **Descripción:**  \r
-- **COMO:** Científico de datos  \r
-- **QUIERO:** Determinar el valor máximo y mínimo en un arreglo  \r
-- **PARA:** Identificar rangos de datos  \r
+**COMO:** Científico de datos  \r
+**QUIERO:** Determinar el valor máximo y mínimo en un arreglo  \r
+**PARA:** Identificar rangos de datos  \r
 \r
 **Entrada:**  \r
 \`\`\`\r
