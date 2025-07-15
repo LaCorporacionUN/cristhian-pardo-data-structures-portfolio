@@ -3,9 +3,9 @@
 ```markdown
 # Ejercicio 3: Encontrar Máximo y Mínimo  
 **Descripción:**  
-- **COMO:** Científico de datos  
-- **QUIERO:** Determinar el valor máximo y mínimo en un arreglo  
-- **PARA:** Identificar rangos de datos  
+**COMO:** Científico de datos  
+**QUIERO:** Determinar el valor máximo y mínimo en un arreglo  
+**PARA:** Identificar rangos de datos  
 
 **Entrada:**  
 ```
