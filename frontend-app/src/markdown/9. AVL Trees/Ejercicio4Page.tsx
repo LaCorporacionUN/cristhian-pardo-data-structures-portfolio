@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Box, VStack } from '@chakra-ui/react'
-import content from './ejercicio9_4.md?raw'
+import content from './ejercicio4.md?raw'
 
 export default function Ejercicio9_4Page() {
   return (
