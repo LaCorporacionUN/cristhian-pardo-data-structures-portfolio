@@ -1,5 +1,37 @@
-# Ejercicio 5 – Sequential List
+# Ejercicio 4.4: Ordenar Lista de Cadenas  
+**Descripción:**  
+- **COMO:** Desarrollador  
+- **QUIERO:** Ordenar una `List<String>`  
+- **PARA:** Practicar `Collections.sort()`  
 
-Otro ejercicio sobre manejo de punteros en arrays.
+**Entrada:**  
+```
+["banana", "apple", "cherry"]
+```
 
-![Test Image](/cristhian-pardo-data-structures-portfolio/images/test.png)
+**Salida:**  
+```
+["apple", "banana", "cherry"]
+```
+
+```mermaid
+flowchart TD
+  A[Inicio] --> B[Crear lista de Strings]  
+  B --> C[Collections.sort(lista)]  
+  C --> D[Imprimir lista]  
+  D --> E[Fin]
+```
+
+![Diagrama Ejercicio 4.4](diagram4.png)
+```
+
+```java
+import java.util.*;
+public class OrdenarStrings {
+    public static void main(String[] args) {
+        List<String> lista = new ArrayList<>(Arrays.asList("banana","apple","cherry"));
+        Collections.sort(lista);
+        System.out.println(lista);
+    }
+}
+```
