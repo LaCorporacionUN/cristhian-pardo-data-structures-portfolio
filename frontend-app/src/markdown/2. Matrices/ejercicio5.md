@@ -28,7 +28,7 @@ flowchart TD
   G --> H[Fin]
 ```
 
-![Diagrama Ejercicio 2.5](diagram5.png)
+![Diagrama](/cristhian-pardo-data-structures-portfolio/images/2.%20Matrices/diagram5.png)
 ```
 
 ```java

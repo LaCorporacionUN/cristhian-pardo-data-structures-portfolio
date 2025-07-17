@@ -29,8 +29,7 @@ flowchart TD
   E --> F[Imprimir R]  
   F --> G[Fin]
 ```
-
-![Diagrama Ejercicio 2.3](diagram3.png)
+![Diagrama](/cristhian-pardo-data-structures-portfolio/images/2.%20Matrices/diagram3.png)
 ```
 
 ```java

@@ -1,1 +1,11 @@
-
+flowchart TD
+  A(Start) --> B(Read dims)
+  B --> C(Read matrix)
+  C --> D(Loop rows)
+  D --> E(Find row min)
+  E --> F(Check col max)
+  F --> G{Is saddle?}
+  G -->|Yes| H(Print and stop)
+  G -->|No| D
+  H --> I(No saddle)
+  I --> J(Done)

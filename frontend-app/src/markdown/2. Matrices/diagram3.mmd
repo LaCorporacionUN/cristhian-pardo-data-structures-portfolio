@@ -1,1 +1,7 @@
-
+flowchart TD
+  A[Inicio] --> B[Leer N]
+  B --> C[Leer matriz cuadrada de tamaño N]
+  C --> D[Inicializar suma = 0]
+  D --> E[Para i de 0 a N-1 hacer suma += elemento en diagonal m_ii]
+  E --> F[Imprimir suma]
+  F --> G[Fin]
