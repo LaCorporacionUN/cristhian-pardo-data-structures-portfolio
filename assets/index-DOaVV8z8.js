@@ -389,7 +389,7 @@ flowchart TD\r
   F --> G[Fin]\r
 \`\`\`\r
 \r
-![Diagrama Ejercicio 1](diagram1.png)\r
+![Diagrama](/cristhian-pardo-data-structures-portfolio/images/1.%20Estructuras%20de%20Datos%20Secuenciales/diagram1.png)\r
 \`\`\`\r
 \r
 \`\`\`java\r
@@ -432,7 +432,7 @@ flowchart TD\r
   E --> F[Fin]\r
 \`\`\`\r
 \r
-![Diagrama Ejercicio 2](diagram2.png)\r
+![Diagrama](/cristhian-pardo-data-structures-portfolio/images/1.%20Estructuras%20de%20Datos%20Secuenciales/diagram2.png)\r
 \`\`\`\r
 \r
 \`\`\`java\r
@@ -476,7 +476,7 @@ flowchart TD\r
   E --> F[Fin]\r
 \`\`\`\r
 \r
-![Diagrama Ejercicio 3](diagram3.png)\r
+![Diagrama](/cristhian-pardo-data-structures-portfolio/images/1.%20Estructuras%20de%20Datos%20Secuenciales/diagram3.png)\r
 \`\`\`\r
 \r
 \`\`\`java\r
@@ -526,7 +526,7 @@ flowchart TD\r
   F --> G[Fin]\r
 \`\`\`\r
 \r
-![Diagrama Ejercicio 4](diagram4.png)\r
+![Diagrama](/cristhian-pardo-data-structures-portfolio/images/1.%20Estructuras%20de%20Datos%20Secuenciales/diagram4.png)\r
 \`\`\`\r
 \r
 \`\`\`java\r
@@ -573,7 +573,7 @@ flowchart TD\r
   E --> F[Fin]\r
 \`\`\`\r
 \r
-![Diagrama Ejercicio 5](diagram5.png)\r
+![Diagrama](/cristhian-pardo-data-structures-portfolio/images/1.%20Estructuras%20de%20Datos%20Secuenciales/diagram5.png)\r
 \`\`\`\r
 \r
 \`\`\`java\r
