@@ -25,7 +25,7 @@ flowchart TD
   F --> G[Fin]
 ```
 
-![Diagrama Ejercicio 1](diagram1.png)
+![Diagrama](/cristhian-pardo-data-structures-portfolio/images/1.%20Estructuras%20de%20Datos%20Secuenciales/diagram1.png)
 ```
 
 ```java
